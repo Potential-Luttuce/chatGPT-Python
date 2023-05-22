@@ -88,10 +88,11 @@ def cake():
 
 def win():
     # Display Winning stuffs
+    os.system('clear && neofetch')
     print(color.CYAN + 'CodeWithCuesta' + color.END)
     print(color.GREEN + '\n\t\tCongrats you have guessed the Random CPU generated number correct!' + color.END)
     print('Enjoy your Cake!\nThe correct answer was - ', random_num)
-    os.system('clear && neofetch && echo "Congrats on beating the game!')
+    print('\n')
     exit()
 
 def lose():
