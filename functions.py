@@ -119,7 +119,7 @@ def getTerms():
         print('\n..........Validating\n')
         sleep(1)
     else: 
-        print(color.Yellow + 'Error: ' + terms + ' is not a vlid Integer.')
+        print(color.Yellow + 'Error: ' + terms + ' is not a valid Integer.')
         exit()
     print('Selected Terms -', terms)   
     terms = terms - 1 
