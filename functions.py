@@ -151,7 +151,23 @@ def getWordCount(string):
             wordCount += 1
     return wordCount
 
+################################ Task 6 ################################
+
+def getTemp():
+    # prompts user for temps and unit
+    # appends to tempList if valid
+    tempList = []
+    print('Enter a temperature to be converted.')
+    currentTemp = int(input('Current Temp: '))
+    
+    tempList.append(currentTemp)
+
+    print('Now enter a unit for the current temp(F = Fahrenheit, C = Celcius)')
+    unit = input('Current Unit: ')
+    tempList.append(unit)
+
 ################################ Task ################################
+
 
 
 
