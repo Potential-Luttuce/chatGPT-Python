@@ -138,6 +138,18 @@ def getFib(num):
 
 ################################ Task 5 ################################
 
+def getText():
+    # Prompts user for string of text
+    text = input('Enter a sentence or passage to display its word count.\nText: ')
+    return text
+
+def getWordCount(string):
+    # itterates over text/string counts spaces and produces word count
+    wordCount = 1
+    for x in string:
+        if x == ' ':
+            wordCount += 1
+    return wordCount
 
 ################################ Task ################################
 

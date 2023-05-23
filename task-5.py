@@ -4,4 +4,9 @@
 # the number of words in it.
 
 import os
+from functions import *
 os.system('clear && neofetch')
+
+text = getText()
+wordCount = getWordCount(text)
+print('Word Count: ', wordCount)
