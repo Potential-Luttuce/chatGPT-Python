@@ -6,7 +6,8 @@
 import os
 from functions import *
 
-# fib seq will always start with 0, 1
+os.system('clear && neofetch')
 
-# create a loop that will do equation up until the specified number of terms
-
+global terms
+terms = getTerms()
+getFib(terms)

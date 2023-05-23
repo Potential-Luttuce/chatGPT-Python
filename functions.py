@@ -108,8 +108,33 @@ def lose():
 
 ################################ Task 4 ################################
 
+def getTerms():
+    # Prompts user for number of terms 
+    # Validates inttered term as int
+    terms = int(input('How many Terms would you like to see?\nTerms: '))
+    if isinstance(terms, int):
+        sleep(1)
+        print('\nValidating..........')
+        sleep(1)
+        print('\n..........Validating\n')
+        sleep(1)
+    else: 
+        print(color.Yellow + 'Error: ' + terms + ' is not a vlid Integer.')
+        exit()
+    print('Selected Terms -', terms)   
+    terms = terms - 1 
+    return terms
 
-
+def getFib(num):
+    fib = [0,1]
+    global i
+    i = 0
+    while i < num:
+        x = fib[i] + fib[i+1]
+        fib.append(x)
+        i += 1
+    print('\nFibonacci Sequence:')
+    print(fib)
 ################################ Task ################################
 
 
