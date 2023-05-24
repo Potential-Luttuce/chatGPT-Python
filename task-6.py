@@ -8,6 +8,10 @@ from functions import *
 os.system('clear && neofetch')
 
 tempList = getTemp()
-
+masterTemps = []
+masterTemps.append(tempList)
 print(tempList)
+
+
+print(masterTemps)
 

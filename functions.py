@@ -67,24 +67,7 @@ def startGuessing():
             print('[Guess is Too high!]')
             print('Your Guess: ', guess)
         else: # If Guess EQUALS Random_num
-            cake()
             win()
-
-def cake():
-    # Displays Cake after winning
-    print('\n')
-    x = r'''
-        ..
-        || 
-      (.__.)
-      |o  o|
-    _.\ - /._
-  _| * \_/ * |_
-  _| * / \ * |_
- _|  * / \ * |_
-|_|_|_.|_|._|_|_| 
-'''
-    print(x)
 
 def win():
     # Display Winning stuffs
@@ -156,15 +139,28 @@ def getWordCount(string):
 def getTemp():
     # prompts user for temps and unit
     # appends to tempList if valid
-    tempList = []
+    list = []
     print('Enter a temperature to be converted.')
+    currentTemp = 'a'
+    while not isinstance(currentTemp, int):
+        try:
+            currentTemp = int(input('\nCurrent Temp: '))
+        except ValueError:
+            print("Invalid input. Please enter a numeric integer value.")
     currentTemp = int(input('Current Temp: '))
-    
-    tempList.append(currentTemp)
+    list.append(currentTemp)
 
+    unitList = ['f', 'c']
     print('Now enter a unit for the current temp(F = Fahrenheit, C = Celcius)')
-    unit = input('Current Unit: ')
-    tempList.append(unit)
+    unit = 1
+    while not isinstance(unit, str):
+        try:
+            unit + str(input('\nCurrent Unit (F or C): '))
+        except ValueError:
+            print("Invalid input. Please enter a numeric integer value.")
+    if unit.lower() in unitList:
+        list.append(unit)
+    return list
 
 ################################ Task ################################
 
